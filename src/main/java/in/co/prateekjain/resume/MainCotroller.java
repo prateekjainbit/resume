@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.sendgrid.Method;
 import com.sendgrid.Request;
@@ -77,10 +78,10 @@ public class MainCotroller {
 	    } catch (IOException ex) {
 	      throw ex;
 	    }
-	    
-	    
-	    
-		return new ModelAndView("index.html");
+	    RedirectView redirectView = new RedirectView("/");
+	    redirectView.setExposePathVariables(false);
+	    return new ModelAndView(redirectView);
+	  
 	}
 	
 	
