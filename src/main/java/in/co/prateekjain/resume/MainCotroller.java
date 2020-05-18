@@ -38,7 +38,7 @@ public class MainCotroller {
 	public ModelAndView sendMail(@RequestParam(value = "contactName")String contactName,@RequestParam(value = "contactEmail") String contactEmail, @RequestParam(value = "contactSubject")String contactSubject, @RequestParam(value = "contactMessage")String contactMessage) throws IOException
 		{
 
-		Email from = new Email("prateekjainbit@gmail.com");
+		Email from = new Email("contact@prateekjain.co.in");
 	    String subject = contactSubject;
 	    Email to = new Email("prateekjainbitm@gmail.com");
 	    Content content = new Content("text/plain","Name: "+contactName+"\nSubject: "+contactSubject+"\nEmail: "+contactEmail+"\nMessage: "+contactMessage);
