@@ -911,7 +911,7 @@
    		<div class="col-twelve">
 
             <!-- form -->
-            <form  action="sendMail">
+            <form  action="sendMail" onsubmit="funcOnSubmit()">
       	
  						   <input name="contactName" type="text" name="contactName" placeholder="Name"  minlength="2" required>
                 
@@ -927,7 +927,12 @@
 
  
       		</form> <!-- Form End -->
-
+<script>
+function funcOnSubmit()
+{
+	alert("Details Submitted Successfully");
+	}
+</script>
 
          </div> <!-- /col-twelve -->
    		
