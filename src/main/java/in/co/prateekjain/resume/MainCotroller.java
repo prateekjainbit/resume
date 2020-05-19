@@ -45,7 +45,7 @@ public class MainCotroller {
 	    Content content = new Content("text/plain","Name: "+contactName+"\nSubject: "+contactSubject+"\nEmail: "+contactEmail+"\nMessage: "+contactMessage);
 	    Mail mail = new Mail(from, subject, to, content);
 
-	    SendGrid sg = new SendGrid(System.getenv("SENDGRID_API_KEY"));
+	    SendGrid sg = new SendGrid("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");
 	    Request request = new Request();
 	    try {
 	      request.setMethod(Method.POST);
